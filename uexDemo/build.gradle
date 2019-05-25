@@ -20,8 +20,8 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile fileTree(include: '*.jar', dir: 'libs')
-    compile(name:'engine-4.0.0-systemRelease',ext:'aar')
+     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name:'engine-4.0.0-systemRelease',ext:'aar')
 //    compile 'org.appcan:engine:+:systemRelease@aar'
 }
 
@@ -36,8 +36,8 @@ repositories {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
     lintOptions {
         abortOnError false
     }
@@ -47,7 +47,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 14 //
+        targetSdkVersion 26 //
         applicationId 'org.zywx.wbpalmstar.widgetone.uexDemo'
         multiDexEnabled true
     }
